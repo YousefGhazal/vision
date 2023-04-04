@@ -2,10 +2,10 @@
 
 # Build the project
 echo "Building the project..."
-python -m pip install -r requirements.txt
+python3 -m pip install -r requirements.txt
 
 echo "Make Migration..."
-python manage.py migrate --noinput
+python3 manage.py migrate --noinput
 
 echo "Collect Static..."
-python manage.py collectstatic --noinput --clear
+python3 manage.py collectstatic --noinput --clear
