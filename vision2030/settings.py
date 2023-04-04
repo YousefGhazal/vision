@@ -26,7 +26,7 @@ SECRET_KEY = "django-insecure-r8x$=1vr8bx)+2=96y711$+^do7!v_x%fmkvrui$vrcjkxhv1(
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['127.0.0.1', '.vercel.app']
 
 
 # Application definition
@@ -71,7 +71,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = "vision2030.wsgi.application"
+WSGI_APPLICATION = "vision2030.wsgi.app"
 
 
 # Database
