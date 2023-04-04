@@ -30,7 +30,7 @@ SECRET_KEY = "django-insecure-r8x$=1vr8bx)+2=96y711$+^do7!v_x%fmkvrui$vrcjkxhv1(
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1', '.vercel.app']
+ALLOWED_HOSTS = ["127.0.0.1", ".vercel.app"]
 
 
 # Application definition
@@ -44,8 +44,7 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     "corsheaders",
     "rest_framework",
-    'main',  
-
+    "main",
 ]
 
 MIDDLEWARE = [
@@ -58,7 +57,11 @@ MIDDLEWARE = [
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
 ]
-CORS_ORIGIN_ALLOW_ALL = True
+
+CORS_ORIGIN_WHITELIST = [
+    'http://localhost:3000',
+    'https://*.vercel.app',
+]
 
 ROOT_URLCONF = "vision2030.urls"
 
@@ -85,7 +88,7 @@ WSGI_APPLICATION = "vision2030.wsgi.app"
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
 DATABASES = {
-    'default': env.db(),
+    "default": env.db(),
 }
 
 
@@ -123,10 +126,10 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
 
-STATIC_URL = '/static/'
-MEDIA_URL = '/media/' 
-MEDIA_ROOT = join(BASE_DIR, 'staticfiles_build', 'media')
-STATIC_ROOT = join(BASE_DIR, 'staticfiles_build', 'static')
+STATIC_URL = "/static/"
+MEDIA_URL = "/media/"
+MEDIA_ROOT = join(BASE_DIR, "staticfiles_build", "media")
+STATIC_ROOT = join(BASE_DIR, "staticfiles_build", "static")
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
