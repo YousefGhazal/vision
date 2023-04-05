@@ -61,7 +61,7 @@ MIDDLEWARE = [
 
 CORS_ORIGIN_WHITELIST = [
     'http://localhost:3000',
-    'https://*.vercel.app/',
+    'https://vision2030.vercel.app/',
 ]
 
 ROOT_URLCONF = "vision2030.urls"
