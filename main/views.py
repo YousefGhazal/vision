@@ -15,7 +15,7 @@ class CartAchievementsView(ListAPIView):
     serializer_class = CartAchievementsSerializer
 
 class CartNewsView(ListAPIView):
-    queryset = CartVision.objects.all()
+    queryset = CartNews.objects.all()
     serializer_class = CartNewsSerializer
 
 
